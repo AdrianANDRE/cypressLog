@@ -4,6 +4,6 @@ describe('Logging TEST Env Variable', () => {
     const testMessage = Cypress.env('TEST');
     // Log the value to the Cypress console
     cy.task('log', `Here is the value of TEST: ${testMessage}`);
-    cy.log(testMessage);
+    cy.task('log',Cypress.env('OWL_TEST'));
   });
 });
